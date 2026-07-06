@@ -1,0 +1,248 @@
+{
+  "results": [
+    {
+      "a": {
+        "~id": "airport-sea",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SEA",
+          "city": "Seattle",
+          "desc": "Seattle-Tacoma Intl"
+        }
+      },
+      "r": {
+        "~id": "route-1",
+        "~entityType": "relationship",
+        "~start": "airport-sea",
+        "~end": "airport-sfo",
+        "~type": "ROUTE",
+        "~properties": {
+          "distance": 680
+        }
+      },
+      "b": {
+        "~id": "airport-sfo",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SFO",
+          "city": "San Francisco",
+          "desc": "San Francisco Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airport-sea",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SEA",
+          "city": "Seattle",
+          "desc": "Seattle-Tacoma Intl"
+        }
+      },
+      "r": {
+        "~id": "route-2",
+        "~entityType": "relationship",
+        "~start": "airport-sea",
+        "~end": "airport-lax",
+        "~type": "ROUTE",
+        "~properties": {
+          "distance": 954
+        }
+      },
+      "b": {
+        "~id": "airport-lax",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "LAX",
+          "city": "Los Angeles",
+          "desc": "Los Angeles Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airport-sfo",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SFO",
+          "city": "San Francisco",
+          "desc": "San Francisco Intl"
+        }
+      },
+      "r": {
+        "~id": "route-3",
+        "~entityType": "relationship",
+        "~start": "airport-sfo",
+        "~end": "airport-lax",
+        "~type": "ROUTE",
+        "~properties": {
+          "distance": 337
+        }
+      },
+      "b": {
+        "~id": "airport-lax",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "LAX",
+          "city": "Los Angeles",
+          "desc": "Los Angeles Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airport-lax",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "LAX",
+          "city": "Los Angeles",
+          "desc": "Los Angeles Intl"
+        }
+      },
+      "r": {
+        "~id": "route-4",
+        "~entityType": "relationship",
+        "~start": "airport-lax",
+        "~end": "airport-jfk",
+        "~type": "ROUTE",
+        "~properties": {
+          "distance": 2475
+        }
+      },
+      "b": {
+        "~id": "airport-jfk",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "JFK",
+          "city": "New York",
+          "desc": "John F Kennedy Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airline-1",
+        "~entityType": "node",
+        "~labels": ["Airline"],
+        "~properties": {
+          "name": "Delta Air Lines",
+          "code": "DL"
+        }
+      },
+      "r": {
+        "~id": "operates-1",
+        "~entityType": "relationship",
+        "~start": "airline-1",
+        "~end": "airport-sea",
+        "~type": "OPERATES_AT",
+        "~properties": {}
+      },
+      "b": {
+        "~id": "airport-sea",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SEA",
+          "city": "Seattle",
+          "desc": "Seattle-Tacoma Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airline-1",
+        "~entityType": "node",
+        "~labels": ["Airline"],
+        "~properties": {
+          "name": "Delta Air Lines",
+          "code": "DL"
+        }
+      },
+      "r": {
+        "~id": "operates-2",
+        "~entityType": "relationship",
+        "~start": "airline-1",
+        "~end": "airport-jfk",
+        "~type": "OPERATES_AT",
+        "~properties": {}
+      },
+      "b": {
+        "~id": "airport-jfk",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "JFK",
+          "city": "New York",
+          "desc": "John F Kennedy Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airline-2",
+        "~entityType": "node",
+        "~labels": ["Airline"],
+        "~properties": {
+          "name": "United Airlines",
+          "code": "UA"
+        }
+      },
+      "r": {
+        "~id": "operates-3",
+        "~entityType": "relationship",
+        "~start": "airline-2",
+        "~end": "airport-sfo",
+        "~type": "OPERATES_AT",
+        "~properties": {}
+      },
+      "b": {
+        "~id": "airport-sfo",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "SFO",
+          "city": "San Francisco",
+          "desc": "San Francisco Intl"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "airline-2",
+        "~entityType": "node",
+        "~labels": ["Airline"],
+        "~properties": {
+          "name": "United Airlines",
+          "code": "UA"
+        }
+      },
+      "r": {
+        "~id": "operates-4",
+        "~entityType": "relationship",
+        "~start": "airline-2",
+        "~end": "airport-lax",
+        "~type": "OPERATES_AT",
+        "~properties": {}
+      },
+      "b": {
+        "~id": "airport-lax",
+        "~entityType": "node",
+        "~labels": ["Airport"],
+        "~properties": {
+          "code": "LAX",
+          "city": "Los Angeles",
+          "desc": "Los Angeles Intl"
+        }
+      }
+    }
+  ]
+}

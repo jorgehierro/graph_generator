@@ -1,0 +1,600 @@
+{
+  "results": [
+    {
+      "a": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      },
+      "r": {
+        "~id": "hq-1",
+        "~entityType": "relationship",
+        "~start": "corp-omnicorp",
+        "~end": "planet-earth",
+        "~type": "HEADQUARTERED_ON",
+        "~properties": {
+          "established_year": 2145,
+          "tax_exempt": false,
+          "office_zone": "Neo-Geneva"
+        }
+      },
+      "b": {
+        "~id": "planet-earth",
+        "~entityType": "node",
+        "~labels": ["Planet", "CoreWorld"],
+        "~properties": {
+          "name": "Earth",
+          "population_billions": 12.5,
+          "atmosphere_type": "Nitrogen-Oxygen",
+          "habitability_score": 0.85
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      },
+      "r": {
+        "~id": "owns-1",
+        "~entityType": "relationship",
+        "~start": "corp-omnicorp",
+        "~end": "corp-tyrell",
+        "~type": "OWNS_SUBSIDIARY",
+        "~properties": {
+          "acquisition_year": 2210,
+          "ownership_percentage": 85.5,
+          "hostile_takeover": true
+        }
+      },
+      "b": {
+        "~id": "corp-tyrell",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Mining"],
+        "~properties": {
+          "name": "Tyrell Extraction Co.",
+          "employee_count": 145000,
+          "safety_rating": "C-"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-tyrell",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Mining"],
+        "~properties": {
+          "name": "Tyrell Extraction Co.",
+          "employee_count": 145000,
+          "safety_rating": "C-"
+        }
+      },
+      "r": {
+        "~id": "mines-1",
+        "~entityType": "relationship",
+        "~start": "corp-tyrell",
+        "~end": "moon-titan",
+        "~type": "EXTRACTS_FROM",
+        "~properties": {
+          "active_rigs": 42,
+          "monthly_quota_tons": 500000,
+          "environmental_fines": [2045, 3100, 8500]
+        }
+      },
+      "b": {
+        "~id": "moon-titan",
+        "~entityType": "node",
+        "~labels": ["Moon", "MiningColony"],
+        "~properties": {
+          "name": "Titan",
+          "parent_planet": "Saturn",
+          "surface_temp_c": -179,
+          "key_exports": ["Methane", "Helium-3"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "moon-titan",
+        "~entityType": "node",
+        "~labels": ["Moon", "MiningColony"],
+        "~properties": {
+          "name": "Titan",
+          "parent_planet": "Saturn",
+          "surface_temp_c": -179,
+          "key_exports": ["Methane", "Helium-3"]
+        }
+      },
+      "r": {
+        "~id": "has-resource-1",
+        "~entityType": "relationship",
+        "~start": "moon-titan",
+        "~end": "resource-he3",
+        "~type": "ABUNDANT_IN",
+        "~properties": {
+          "purity_percentage": 98.2,
+          "accessibility": "Deep Crust"
+        }
+      },
+      "b": {
+        "~id": "resource-he3",
+        "~entityType": "node",
+        "~labels": ["Resource", "EnergySource"],
+        "~properties": {
+          "name": "Helium-3",
+          "state": "Gas",
+          "price_per_kg_credits": 125000,
+          "radioactive": false
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-alan",
+        "~entityType": "node",
+        "~labels": ["Person", "Executive"],
+        "~properties": {
+          "name": "Alan Sterling",
+          "age": 62,
+          "cybernetic_implants": true,
+          "clearance_level": 9
+        }
+      },
+      "r": {
+        "~id": "ceo-1",
+        "~entityType": "relationship",
+        "~start": "person-alan",
+        "~end": "corp-omnicorp",
+        "~type": "CEO_OF",
+        "~properties": {
+          "appointed_year": 2235,
+          "annual_bonus_millions": 45.5,
+          "approval_rating": 0.72
+        }
+      },
+      "b": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-alan",
+        "~entityType": "node",
+        "~labels": ["Person", "Executive"],
+        "~properties": {
+          "name": "Alan Sterling",
+          "age": 62,
+          "cybernetic_implants": true,
+          "clearance_level": 9
+        }
+      },
+      "r": {
+        "~id": "born-1",
+        "~entityType": "relationship",
+        "~start": "person-alan",
+        "~end": "planet-mars",
+        "~type": "BORN_ON",
+        "~properties": {
+          "birth_year": 2184,
+          "citizenship_status": "Dual"
+        }
+      },
+      "b": {
+        "~id": "planet-mars",
+        "~entityType": "node",
+        "~labels": ["Planet", "Colony"],
+        "~properties": {
+          "name": "Mars",
+          "population_billions": 3.2,
+          "terraformed_percentage": 45.0,
+          "capital": "New Ares"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "planet-mars",
+        "~entityType": "node",
+        "~labels": ["Planet", "Colony"],
+        "~properties": {
+          "name": "Mars",
+          "population_billions": 3.2,
+          "terraformed_percentage": 45.0,
+          "capital": "New Ares"
+        }
+      },
+      "r": {
+        "~id": "allied-1",
+        "~entityType": "relationship",
+        "~start": "planet-mars",
+        "~end": "planet-earth",
+        "~type": "TREATY_WITH",
+        "~properties": {
+          "treaty_name": "Inner Sphere Accord",
+          "signed_year": 2201,
+          "military_alliance": true
+        }
+      },
+      "b": {
+        "~id": "planet-earth",
+        "~entityType": "node",
+        "~labels": ["Planet", "CoreWorld"],
+        "~properties": {
+          "name": "Earth",
+          "population_billions": 12.5,
+          "atmosphere_type": "Nitrogen-Oxygen",
+          "habitability_score": 0.85
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-weyland",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Logistics"],
+        "~properties": {
+          "name": "Weyland Transport Co.",
+          "fleet_size": 12500,
+          "headquarters": "Mars"
+        }
+      },
+      "r": {
+        "~id": "contract-1",
+        "~entityType": "relationship",
+        "~start": "corp-weyland",
+        "~end": "corp-omnicorp",
+        "~type": "CONTRACTED_BY",
+        "~properties": {
+          "contract_value_billions": 12.4,
+          "exclusive": false,
+          "expiration_year": 2250
+        }
+      },
+      "b": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-weyland",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Logistics"],
+        "~properties": {
+          "name": "Weyland Transport Co.",
+          "fleet_size": 12500,
+          "headquarters": "Mars"
+        }
+      },
+      "r": {
+        "~id": "owns-ship-1",
+        "~entityType": "relationship",
+        "~start": "corp-weyland",
+        "~end": "ship-dauntless",
+        "~type": "REGISTERED_OWNER_OF",
+        "~properties": {
+          "registration_code": "WTC-8842",
+          "insurance_status": "Active"
+        }
+      },
+      "b": {
+        "~id": "ship-dauntless",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Freighter"],
+        "~properties": {
+          "name": "The Dauntless",
+          "class": "Heavy Cargo",
+          "max_warp": 3.5,
+          "crew_capacity": 45
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-rey",
+        "~entityType": "node",
+        "~labels": ["Person", "Pilot"],
+        "~properties": {
+          "name": "Captain Rey",
+          "age": 38,
+          "flight_hours": 14200,
+          "licenses": ["Class A", "Deep Space", "Hazardous Materials"]
+        }
+      },
+      "r": {
+        "~id": "pilots-1",
+        "~entityType": "relationship",
+        "~start": "person-rey",
+        "~end": "ship-dauntless",
+        "~type": "CAPTAINS",
+        "~properties": {
+          "start_date": "2242-03-15",
+          "incident_reports": 0
+        }
+      },
+      "b": {
+        "~id": "ship-dauntless",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Freighter"],
+        "~properties": {
+          "name": "The Dauntless",
+          "class": "Heavy Cargo",
+          "max_warp": 3.5,
+          "crew_capacity": 45
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "ship-dauntless",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Freighter"],
+        "~properties": {
+          "name": "The Dauntless",
+          "class": "Heavy Cargo",
+          "max_warp": 3.5,
+          "crew_capacity": 45
+        }
+      },
+      "r": {
+        "~id": "transport-1",
+        "~entityType": "relationship",
+        "~start": "ship-dauntless",
+        "~end": "resource-he3",
+        "~type": "TRANSPORTS_CARGO",
+        "~properties": {
+          "current_load_tons": 1250,
+          "origin": "Titan",
+          "destination": "Earth",
+          "estimated_arrival": "2246-11-02"
+        }
+      },
+      "b": {
+        "~id": "resource-he3",
+        "~entityType": "node",
+        "~labels": ["Resource", "EnergySource"],
+        "~properties": {
+          "name": "Helium-3",
+          "state": "Gas",
+          "price_per_kg_credits": 125000,
+          "radioactive": false
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-jax",
+        "~entityType": "node",
+        "~labels": ["Person", "Smuggler"],
+        "~properties": {
+          "name": "Jax 'Ghost' Vane",
+          "bounty_credits": 500000,
+          "known_aliases": ["Viper", "Red-6", "Drifter"]
+        }
+      },
+      "r": {
+        "~id": "wanted-1",
+        "~entityType": "relationship",
+        "~start": "person-jax",
+        "~end": "corp-omnicorp",
+        "~type": "WANTED_BY",
+        "~properties": {
+          "crimes": ["Corporate Espionage", "Cargo Theft", "Unlicensed Transits"],
+          "priority_level": "High"
+        }
+      },
+      "b": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-jax",
+        "~entityType": "node",
+        "~labels": ["Person", "Smuggler"],
+        "~properties": {
+          "name": "Jax 'Ghost' Vane",
+          "bounty_credits": 500000,
+          "known_aliases": ["Viper", "Red-6", "Drifter"]
+        }
+      },
+      "r": {
+        "~id": "pilots-2",
+        "~entityType": "relationship",
+        "~start": "person-jax",
+        "~end": "ship-rogue",
+        "~type": "OWNS_AND_PILOTS",
+        "~properties": {
+          "stolen_vessel": true,
+          "modifications": ["Stealth Plating", "Overclocked Hyperdrive"]
+        }
+      },
+      "b": {
+        "~id": "ship-rogue",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Interceptor"],
+        "~properties": {
+          "name": "The Crimson Void",
+          "class": "Light Interceptor",
+          "max_warp": 8.2,
+          "crew_capacity": 3
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "ship-rogue",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Interceptor"],
+        "~properties": {
+          "name": "The Crimson Void",
+          "class": "Light Interceptor",
+          "max_warp": 8.2,
+          "crew_capacity": 3
+        }
+      },
+      "r": {
+        "~id": "smuggles-1",
+        "~entityType": "relationship",
+        "~start": "ship-rogue",
+        "~end": "resource-he3",
+        "~type": "SMUGGLES",
+        "~properties": {
+          "frequency": "Monthly",
+          "evasion_success_rate": 0.95
+        }
+      },
+      "b": {
+        "~id": "resource-he3",
+        "~entityType": "node",
+        "~labels": ["Resource", "EnergySource"],
+        "~properties": {
+          "name": "Helium-3",
+          "state": "Gas",
+          "price_per_kg_credits": 125000,
+          "radioactive": false
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "ship-rogue",
+        "~entityType": "node",
+        "~labels": ["Spaceship", "Interceptor"],
+        "~properties": {
+          "name": "The Crimson Void",
+          "class": "Light Interceptor",
+          "max_warp": 8.2,
+          "crew_capacity": 3
+        }
+      },
+      "r": {
+        "~id": "docks-1",
+        "~entityType": "relationship",
+        "~start": "ship-rogue",
+        "~end": "planet-proxima",
+        "~type": "HIDDEN_BASE_ON",
+        "~properties": {
+          "coordinates": [88.2, -14.5, 102.1],
+          "defenses_active": true
+        }
+      },
+      "b": {
+        "~id": "planet-proxima",
+        "~entityType": "node",
+        "~labels": ["Planet", "Exoplanet"],
+        "~properties": {
+          "name": "Proxima Centauri b",
+          "distance_ly": 4.24,
+          "colonized": true,
+          "government_type": "Anarcho-Syndicalist"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-omnicorp",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Conglomerate"],
+        "~properties": {
+          "name": "OmniCorp Intergalactic",
+          "market_cap_trillions": 45.2,
+          "publicly_traded": true,
+          "sectors": ["Mining", "Defense", "Logistics"]
+        }
+      },
+      "r": {
+        "~id": "expands-1",
+        "~entityType": "relationship",
+        "~start": "corp-omnicorp",
+        "~end": "planet-proxima",
+        "~type": "FUNDS_EXPEDITION_TO",
+        "~properties": {
+          "budget_billions": 250.0,
+          "mission_objective": "Resource Survey",
+          "expected_roi": 3.5
+        }
+      },
+      "b": {
+        "~id": "planet-proxima",
+        "~entityType": "node",
+        "~labels": ["Planet", "Exoplanet"],
+        "~properties": {
+          "name": "Proxima Centauri b",
+          "distance_ly": 4.24,
+          "colonized": true,
+          "government_type": "Anarcho-Syndicalist"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "corp-tyrell",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Mining"],
+        "~properties": {
+          "name": "Tyrell Extraction Co.",
+          "employee_count": 145000,
+          "safety_rating": "C-"
+        }
+      },
+      "r": {
+        "~id": "competes-1",
+        "~entityType": "relationship",
+        "~start": "corp-tyrell",
+        "~end": "corp-weyland",
+        "~type": "COMPETES_WITH",
+        "~properties": {
+          "market_overlap": ["Logistics", "Raw Materials"],
+          "litigation_pending": true
+        }
+      },
+      "b": {
+        "~id": "corp-weyland",
+        "~entityType": "node",
+        "~labels": ["Corporation", "Logistics"],
+        "~properties": {
+          "name": "Weyland Transport Co.",
+          "fleet_size": 12500,
+          "headquarters": "Mars"
+        }
+      }
+    }
+  ]
+}

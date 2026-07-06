@@ -1,0 +1,457 @@
+{
+  "results": [
+    {
+      "a": {
+        "~id": "person-tamar",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Monarch"],
+        "~properties": {
+          "name": "King Tamar the Great",
+          "birth_year": 1160,
+          "death_year": 1213,
+          "dynasty": "Bagrationi",
+          "canonized": true
+        }
+      },
+      "r": {
+        "~id": "ruled-1",
+        "~entityType": "relationship",
+        "~start": "person-tamar",
+        "~end": "kingdom-georgia",
+        "~type": "RULED",
+        "~properties": {
+          "start_year": 1184,
+          "end_year": 1213,
+          "era_name": "Golden Age"
+        }
+      },
+      "b": {
+        "~id": "kingdom-georgia",
+        "~entityType": "node",
+        "~labels": ["HistoricalEntity", "State"],
+        "~properties": {
+          "name": "Kingdom of Georgia",
+          "founded_year": 1008,
+          "dissolved_year": 1490,
+          "religion": "Eastern Orthodox"
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-shota",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Poet"],
+        "~properties": {
+          "name": "Shota Rustaveli",
+          "birth_year": 1160,
+          "death_year": 1220,
+          "professions": ["Treasurer", "Poet"]
+        }
+      },
+      "r": {
+        "~id": "served-1",
+        "~entityType": "relationship",
+        "~start": "person-shota",
+        "~end": "person-tamar",
+        "~type": "SERVED_UNDER",
+        "~properties": {
+          "role": "Minister of Finance",
+          "confidence_level": "High"
+        }
+      },
+      "b": {
+        "~id": "person-tamar",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Monarch"],
+        "~properties": {
+          "name": "King Tamar the Great",
+          "birth_year": 1160,
+          "death_year": 1213,
+          "dynasty": "Bagrationi",
+          "canonized": true
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "person-shota",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Poet"],
+        "~properties": {
+          "name": "Shota Rustaveli",
+          "birth_year": 1160,
+          "death_year": 1220,
+          "professions": ["Treasurer", "Poet"]
+        }
+      },
+      "r": {
+        "~id": "authored-1",
+        "~entityType": "relationship",
+        "~start": "person-shota",
+        "~end": "artifact-knight",
+        "~type": "AUTHORED",
+        "~properties": {
+          "language": "Georgian",
+          "estimated_completion": 1205
+        }
+      },
+      "b": {
+        "~id": "artifact-knight",
+        "~entityType": "node",
+        "~labels": ["CulturalArtifact", "Literature"],
+        "~properties": {
+          "title": "The Knight in the Panther's Skin",
+          "genre": "Epic Poetry",
+          "stanzas": 1600,
+          "themes": ["Chivalry", "Friendship", "Equality"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "artifact-knight",
+        "~entityType": "node",
+        "~labels": ["CulturalArtifact", "Literature"],
+        "~properties": {
+          "title": "The Knight in the Panther's Skin",
+          "genre": "Epic Poetry",
+          "stanzas": 1600,
+          "themes": ["Chivalry", "Friendship", "Equality"]
+        }
+      },
+      "r": {
+        "~id": "dedicated-1",
+        "~entityType": "relationship",
+        "~start": "artifact-knight",
+        "~end": "person-tamar",
+        "~type": "DEDICATED_TO",
+        "~properties": {
+          "explicitly_stated": true,
+          "prologue_reference": true
+        }
+      },
+      "b": {
+        "~id": "person-tamar",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Monarch"],
+        "~properties": {
+          "name": "King Tamar the Great",
+          "birth_year": 1160,
+          "death_year": 1213,
+          "dynasty": "Bagrationi",
+          "canonized": true
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "media-doc-goldenage",
+        "~entityType": "node",
+        "~labels": ["Documentary", "EducationalMedia"],
+        "~properties": {
+          "title": "Echoes of the Caucasus: The Golden Age",
+          "release_year": 2023,
+          "platforms": ["YouTube", "PBS"],
+          "runtime_mins": 95
+        }
+      },
+      "r": {
+        "~id": "analyzes-1",
+        "~entityType": "relationship",
+        "~start": "media-doc-goldenage",
+        "~end": "artifact-knight",
+        "~type": "ANALYZES",
+        "~properties": {
+          "segment": "Part 2: Literary Renaissance",
+          "timestamps": ["00:34:10", "00:48:05"]
+        }
+      },
+      "b": {
+        "~id": "artifact-knight",
+        "~entityType": "node",
+        "~labels": ["CulturalArtifact", "Literature"],
+        "~properties": {
+          "title": "The Knight in the Panther's Skin",
+          "genre": "Epic Poetry",
+          "stanzas": 1600,
+          "themes": ["Chivalry", "Friendship", "Equality"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "city-mts",
+        "~entityType": "node",
+        "~labels": ["City", "HistoricalCapital"],
+        "~properties": {
+          "name": "Mtskheta",
+          "founded_century": -5,
+          "elevation_m": 460,
+          "rivers": ["Mtkvari", "Aragvi"]
+        }
+      },
+      "r": {
+        "~id": "former_capital-1",
+        "~entityType": "relationship",
+        "~start": "city-mts",
+        "~end": "kingdom-iberia",
+        "~type": "FORMER_CAPITAL_OF",
+        "~properties": {
+          "start_century": -3,
+          "end_century": 5
+        }
+      },
+      "b": {
+        "~id": "kingdom-iberia",
+        "~entityType": "node",
+        "~labels": ["HistoricalEntity", "State"],
+        "~properties": {
+          "name": "Kingdom of Iberia",
+          "region": "Eastern Caucasus",
+          "christianized_year": 326
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "site-sveti",
+        "~entityType": "node",
+        "~labels": ["HistoricalSite", "ReligiousBuilding"],
+        "~properties": {
+          "name": "Svetitskhoveli Cathedral",
+          "architecture_style": "Cross-dome",
+          "completed_year": 1029,
+          "unesco_status": true
+        }
+      },
+      "r": {
+        "~id": "located-1",
+        "~entityType": "relationship",
+        "~start": "site-sveti",
+        "~end": "city-mts",
+        "~type": "LOCATED_IN",
+        "~properties": {
+          "coordinates": [41.8422, 44.7211]
+        }
+      },
+      "b": {
+        "~id": "city-mts",
+        "~entityType": "node",
+        "~labels": ["City", "HistoricalCapital"],
+        "~properties": {
+          "name": "Mtskheta",
+          "founded_century": -5,
+          "elevation_m": 460,
+          "rivers": ["Mtkvari", "Aragvi"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "site-sveti",
+        "~entityType": "node",
+        "~labels": ["HistoricalSite", "ReligiousBuilding"],
+        "~properties": {
+          "name": "Svetitskhoveli Cathedral",
+          "architecture_style": "Cross-dome",
+          "completed_year": 1029,
+          "unesco_status": true
+        }
+      },
+      "r": {
+        "~id": "contains-tomb-1",
+        "~entityType": "relationship",
+        "~start": "site-sveti",
+        "~end": "person-tamar",
+        "~type": "RUMORED_BURIAL_SITE_OF",
+        "~properties": {
+          "verified": false,
+          "legend_basis": true
+        }
+      },
+      "b": {
+        "~id": "person-tamar",
+        "~entityType": "node",
+        "~labels": ["HistoricalFigure", "Monarch"],
+        "~properties": {
+          "name": "King Tamar the Great",
+          "birth_year": 1160,
+          "death_year": 1213,
+          "dynasty": "Bagrationi",
+          "canonized": true
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "city-tbs",
+        "~entityType": "node",
+        "~labels": ["City", "ModernCapital"],
+        "~properties": {
+          "name": "Tbilisi",
+          "founded_century": 5,
+          "population": 1118000
+        }
+      },
+      "r": {
+        "~id": "connected-1",
+        "~entityType": "relationship",
+        "~start": "city-tbs",
+        "~end": "city-mts",
+        "~type": "CONNECTED_TO",
+        "~properties": {
+          "highway": "S1",
+          "distance_km": 20,
+          "travel_time_mins": 25
+        }
+      },
+      "b": {
+        "~id": "city-mts",
+        "~entityType": "node",
+        "~labels": ["City", "HistoricalCapital"],
+        "~properties": {
+          "name": "Mtskheta",
+          "founded_century": -5,
+          "elevation_m": 460,
+          "rivers": ["Mtkvari", "Aragvi"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "river-mtkvari",
+        "~entityType": "node",
+        "~labels": ["GeographicFeature", "River"],
+        "~properties": {
+          "name": "Kura (Mtkvari)",
+          "length_km": 1515,
+          "basin_size_sqkm": 188000
+        }
+      },
+      "r": {
+        "~id": "flows-1",
+        "~entityType": "relationship",
+        "~start": "river-mtkvari",
+        "~end": "city-tbs",
+        "~type": "FLOWS_THROUGH",
+        "~properties": {
+          "direction": "Southeast",
+          "navigable": false
+        }
+      },
+      "b": {
+        "~id": "city-tbs",
+        "~entityType": "node",
+        "~labels": ["City", "ModernCapital"],
+        "~properties": {
+          "name": "Tbilisi",
+          "founded_century": 5,
+          "population": 1118000
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "river-mtkvari",
+        "~entityType": "node",
+        "~labels": ["GeographicFeature", "River"],
+        "~properties": {
+          "name": "Kura (Mtkvari)",
+          "length_km": 1515,
+          "basin_size_sqkm": 188000
+        }
+      },
+      "r": {
+        "~id": "flows-2",
+        "~entityType": "relationship",
+        "~start": "river-mtkvari",
+        "~end": "city-mts",
+        "~type": "FLOWS_THROUGH",
+        "~properties": {
+          "direction": "East",
+          "confluence_point": true
+        }
+      },
+      "b": {
+        "~id": "city-mts",
+        "~entityType": "node",
+        "~labels": ["City", "HistoricalCapital"],
+        "~properties": {
+          "name": "Mtskheta",
+          "founded_century": -5,
+          "elevation_m": 460,
+          "rivers": ["Mtkvari", "Aragvi"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "geo-military-highway",
+        "~entityType": "node",
+        "~labels": ["GeographicFeature", "Route"],
+        "~properties": {
+          "name": "Georgian Military Highway",
+          "historic_trade_route": true,
+          "highest_point_m": 2379
+        }
+      },
+      "r": {
+        "~id": "intersects-1",
+        "~entityType": "relationship",
+        "~start": "geo-military-highway",
+        "~end": "city-mts",
+        "~type": "PASSES_THROUGH",
+        "~properties": {
+          "scenic_rating": 5
+        }
+      },
+      "b": {
+        "~id": "city-mts",
+        "~entityType": "node",
+        "~labels": ["City", "HistoricalCapital"],
+        "~properties": {
+          "name": "Mtskheta",
+          "founded_century": -5,
+          "elevation_m": 460,
+          "rivers": ["Mtkvari", "Aragvi"]
+        }
+      }
+    },
+    {
+      "a": {
+        "~id": "media-doc-goldenage",
+        "~entityType": "node",
+        "~labels": ["Documentary", "EducationalMedia"],
+        "~properties": {
+          "title": "Echoes of the Caucasus: The Golden Age",
+          "release_year": 2023,
+          "platforms": ["YouTube", "PBS"],
+          "runtime_mins": 95
+        }
+      },
+      "r": {
+        "~id": "filmed-at-1",
+        "~entityType": "relationship",
+        "~start": "media-doc-goldenage",
+        "~end": "site-sveti",
+        "~type": "FILMED_LOCATION",
+        "~properties": {
+          "drone_footage": true,
+          "interior_access": true
+        }
+      },
+      "b": {
+        "~id": "site-sveti",
+        "~entityType": "node",
+        "~labels": ["HistoricalSite", "ReligiousBuilding"],
+        "~properties": {
+          "name": "Svetitskhoveli Cathedral",
+          "architecture_style": "Cross-dome",
+          "completed_year": 1029,
+          "unesco_status": true
+        }
+      }
+    }
+  ]
+}
